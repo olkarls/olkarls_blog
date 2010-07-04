@@ -7,6 +7,17 @@ gem 'rails', '3.0.0.beta4'
 
 gem 'mysql'
 
+# Cucumber + RSpec
+
+gem 'capybara'
+gem 'database_cleaner'
+gem 'cucumber-rails'
+gem 'cucumber'
+gem 'rspec', '2.0.0.beta.12'
+gem 'rspec-rails', '2.0.0.beta.12'
+gem 'spork'
+gem 'launchy'    # So you can do Then show me the page
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

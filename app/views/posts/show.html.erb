@@ -1,0 +1,12 @@
+<article>
+  <header>
+    <h1><%= @post.title %></h1>
+    <span><%= t(:published_at) %>: <%= @post.published_at.strftime("%Y-%m-%d") %></span>
+  </header>
+  <section class="preamble">
+    <%= @post.preamble %>
+  </section>
+  <section class="content">
+    <%= @post.body %>
+  </section>
+</article>

@@ -1,0 +1,7 @@
+<%= form_for @post do |form| %>
+  <%= form.text_field :title %>
+  <%= form.text_area :preamble %>
+  <%= form.text_area :body %>
+  <%= form.datetime_select :published_at %>
+  <%= form.submit "Save" %>
+<% end %>
