@@ -1,5 +1,5 @@
 --- 
-hash: 0aa58fb9f3ceaa5e5d7c38d425d3ef4d62129420
+hash: b0c15d4ab8b71343a08005725300294a0fed0d53
 sources: 
 - Rubygems: 
     uri: http://rubygems.org
@@ -102,6 +102,8 @@ specs:
     version: 2.0.0.beta.12
 - spork: 
     version: 0.8.4
+- validation_reflection: 
+    version: 0.3.7
 dependencies: 
   rails: 
     version: = 3.0.0.beta4
@@ -144,6 +146,10 @@ dependencies:
     group: 
     - :default
   factory_girl_rails: 
+    version: ">= 0"
+    group: 
+    - :default
+  validation_reflection: 
     version: ">= 0"
     group: 
     - :default

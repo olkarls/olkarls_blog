@@ -1,4 +1,2 @@
-<%= semantic_form_for @post do |form| %>
-  <%= render :partial => "form", :locals => { :form => form } %>
-  <%= form.submit "Save" %>
-<% end %>
+<h1><%= t(:new_post) %></h1>
+<%= render :partial => "form" %>

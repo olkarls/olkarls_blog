@@ -1,4 +1,12 @@
-<%= form.text_field :title %>
-<%= form.text_area :preamble %>
-<%= form.text_area :body %>
-<%= form.datetime_select :published_at %>
+<%= semantic_form_for @post do |form| %>
+  <%= form.fieldset :legend => t(:main) do %>
+    <%= form.text_field :title %>
+    <%= form.text_area :preamble %>
+    <%= form.text_area :body %>
+    <%= form.phone_field :telephone %>
+  <% end %>
+  <%= form.datetime_select :published_at %>
+  <%= form.fieldset nil, :class => "buttons" do %>
+    <%= form.submit %>
+  <% end %>
+<% end %>

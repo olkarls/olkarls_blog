@@ -18,6 +18,7 @@ gem 'rspec-rails', '2.0.0.beta.12'
 gem 'spork'
 gem 'launchy'    # So you can do Then show me the page
 gem 'factory_girl_rails'
+gem 'validation_reflection'
 
 # Use unicorn as the web server
 # gem 'unicorn'
