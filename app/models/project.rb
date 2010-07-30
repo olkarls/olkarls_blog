@@ -1,0 +1,3 @@
+class Project < Post
+
+end
