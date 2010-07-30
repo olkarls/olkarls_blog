@@ -1,12 +1,15 @@
 <%= semantic_form_for @post do |form| %>
-  <%= form.fieldset :legend => t(:main) do %>
+  <%= form.fieldset do %>
     <%= form.text_field :title %>
-    <%= form.text_area :preamble %>
+    <%= form.text_field :permalink, :hint => t(:post_permalink_hint) %>
+    <%= form.text_area :summary %>
     <%= form.text_area :body %>
-    <%= form.phone_field :telephone %>
   <% end %>
-  <%= form.datetime_select :published_at %>
-  <%= form.fieldset nil, :class => "buttons" do %>
-    <%= form.submit %>
+  <%= form.fieldset do %>
+    <%= form.check_box :published %>
+    <%= form.datetime_select :published_at %>
+  <% end %>
+  <%= form.fieldset :class => "buttons" do %>
+    <%= form.submit "Save", :disable_with => "Hold yer horses..." %> <%= t(:or) %> <%= link_to t(:all_posts), posts_path %>
   <% end %>
 <% end %>

@@ -1,6 +1,12 @@
 OlkarlsBlog::Application.routes.draw do |map|
-  root :to => "posts#index"
   resources :posts
+  resources :articles
+  resources :projects
+  
+  match '/blog', :to => "blog#index"
+  
+  match 'posts/tagged/:tag', :to => "posts#tagged", :as => :post_tagged
+  root :to => "posts#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

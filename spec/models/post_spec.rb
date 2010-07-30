@@ -12,5 +12,7 @@ describe Post do
   it "should not be valid without a title" do
     @post.title = ""
     @post.should_not be_valid
+    @post.title = nil
+    @post.should_not be_valid
   end
 end

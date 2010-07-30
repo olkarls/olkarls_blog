@@ -89,7 +89,7 @@ document.observe("dom:loaded", function() {
       return false;
     }
 
-    var inputs = element.select("input[type=submit][data-disable-with]");
+    var inputs = element.select("button[type=submit][data-disable-with]");
     inputs.each(function(input) {
       input.disabled = true;
       input.writeAttribute('data-original-value', input.value);
@@ -107,7 +107,7 @@ document.observe("dom:loaded", function() {
     var element = event.findElement();
 
     if (element.tagName.toLowerCase() === 'form') {
-      var inputs = element.select("input[type=submit][disabled=true][data-disable-with]");
+      var inputs = element.select("button[type=submit][disabled=true][data-disable-with]");
       inputs.each(function(input) {
         input.value = input.readAttribute('data-original-value');
         input.writeAttribute('data-original-value', null);

@@ -1,12 +1,15 @@
 <article>
   <header>
-    <h2><%= post.title %></h2>
+    <h2><%= link_to post.title, post_path(post) %></h2>
     <span><%= t(:published_at) %>: <%= post.published_at.strftime("%Y-%m-%d") %></span>
+    <% post.tags.each do |tag| %>
+      <%= link_to tag.name, post_tagged_path(tag.name) %>
+    <% end %>
   </header>
-  <section class="preamble">
-    <%= post.preamble %>
+  <section class="summary">
+    <%= raw post.summary %>
   </section>
   <section class="content">
-    <%= post.body %>
+    <%= raw post.body %>
   </section>
 </article>

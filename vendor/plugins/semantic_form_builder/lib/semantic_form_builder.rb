@@ -21,13 +21,11 @@ module SemanticFormBuilder
         end
         field_wrapper(method_name, field_name) do
           field_label(field_name, method_name, *args) + 
-          @template.text_field_tag("#{object_name}[#{field_name}]", object.send(field_name), options.stringify_keys.update("type" => "tel").merge(:builder => nil, :size => 30)) + 
+          @template.text_field_tag("#{object_name}[#{field_name}]", object.send(field_name), options.stringify_keys.update("type" => type).merge(:builder => nil, :size => 30)) + 
           field_error_or_hint(field_name, *args)
         end
       end
     end
-    
-    alias phone_field telephone_field
     
     def field_wrapper(method_name = nil, field_name = nil, &block)
       if block_given?
@@ -43,7 +41,9 @@ module SemanticFormBuilder
       text = I18n.translate(:save) if text.blank?
       options = args.extract_options!
       options[:name] = "commit" if options[:name].blank?
-      @template.content_tag(:button, :class => options[:class], :id => options[:id], :name => options[:name], :type => "submit") do
+      disable_with = options[:disable_with] unless options[:disable_with].blank?
+      
+      @template.content_tag(:button, :class => options[:class], :id => options[:id], :name => options[:name], :type => "submit", "data-disable-with" => disable_with) do
         @template.content_tag(:span, text)
       end
     end
@@ -61,6 +61,14 @@ module SemanticFormBuilder
       end
     end
     
+    def check_box(field_name, *args)
+      field_wrapper("check_box", field_name) do
+        super(field_name, *args) +
+        field_label(field_name, "check_box", *args) +
+        field_error_or_hint(field_name, *args)
+      end
+    end
+    
     protected
     
     def field_wrapper_classes(method_name, field_name)
@@ -68,6 +76,7 @@ module SemanticFormBuilder
       unless method_name.blank? && field_name.blank?
         classes << [wrapper_class_for_method(method_name)]
         classes << "field_with_error" if has_error?(field_name)
+        classes << "required" if field_required?(field_name)
       end
       classes.join(" ")
     end

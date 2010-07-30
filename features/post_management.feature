@@ -6,7 +6,7 @@ Feature: Manage posts
   Scenario: Create post
    When I go to the new post page
    And I fill in "post[title]" with "A new post"
-   And I fill in "post[preamble]" with "New remarkable post."
+   And I fill in "post[summary]" with "New remarkable post."
    And I fill in "post[body]" with "Massive breathtaking content."
    And I select "2010" from "post[published_at(1i)]"
    And I select "October" from "post[published_at(2i)]"

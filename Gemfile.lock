@@ -1,155 +1,162 @@
---- 
-hash: b0c15d4ab8b71343a08005725300294a0fed0d53
-sources: 
-- Rubygems: 
-    uri: http://rubygems.org
-specs: 
-- rake: 
-    version: 0.8.7
-- abstract: 
-    version: 1.0.0
-- activesupport: 
-    version: 3.0.0.beta4
-- builder: 
-    version: 2.1.2
-- i18n: 
-    version: 0.4.1
-- activemodel: 
-    version: 3.0.0.beta4
-- erubis: 
-    version: 2.6.6
-- rack: 
-    version: 1.1.0
-- rack-mount: 
-    version: 0.6.6
-- rack-test: 
-    version: 0.5.4
-- tzinfo: 
-    version: 0.3.22
-- actionpack: 
-    version: 3.0.0.beta4
-- mime-types: 
-    version: "1.16"
-- polyglot: 
-    version: 0.3.1
-- treetop: 
-    version: 1.4.8
-- mail: 
-    version: 2.2.5
-- actionmailer: 
-    version: 3.0.0.beta4
-- arel: 
-    version: 0.4.0
-- activerecord: 
-    version: 3.0.0.beta4
-- activeresource: 
-    version: 3.0.0.beta4
-- bundler: 
-    version: 0.9.26
-- culerity: 
-    version: 0.2.10
-- nokogiri: 
-    version: 1.4.2
-- ffi: 
-    version: 0.6.3
-- json_pure: 
-    version: 1.4.3
-- selenium-webdriver: 
-    version: 0.0.24
-- capybara: 
-    version: 0.3.9
-- configuration: 
-    version: 1.1.0
-- diff-lcs: 
-    version: 1.1.2
-- trollop: 
-    version: 1.16.2
-- gherkin: 
-    version: 2.0.2
-- term-ansicolor: 
-    version: 1.0.5
-- cucumber: 
-    version: 0.8.3
-- cucumber-rails: 
-    version: 0.3.2
-- database_cleaner: 
-    version: 0.5.2
-- factory_girl: 
-    version: 1.3.1
-- thor: 
-    version: 0.13.7
-- railties: 
-    version: 3.0.0.beta4
-- rails: 
-    version: 3.0.0.beta4
-- factory_girl_rails: 
-    version: "1.0"
-- launchy: 
-    version: 0.3.5
-- mysql: 
-    version: 2.8.1
-- rspec-core: 
-    version: 2.0.0.beta.12
-- rspec-expectations: 
-    version: 2.0.0.beta.12
-- rspec-mocks: 
-    version: 2.0.0.beta.12
-- rspec: 
-    version: 2.0.0.beta.12
-- webrat: 
-    version: 0.7.1
-- rspec-rails: 
-    version: 2.0.0.beta.12
-- spork: 
-    version: 0.8.4
-- validation_reflection: 
-    version: 0.3.7
-dependencies: 
-  rails: 
-    version: = 3.0.0.beta4
-    group: 
-    - :default
-  mysql: 
-    version: ">= 0"
-    group: 
-    - :default
-  capybara: 
-    version: ">= 0"
-    group: 
-    - :default
-  database_cleaner: 
-    version: ">= 0"
-    group: 
-    - :default
-  cucumber-rails: 
-    version: ">= 0"
-    group: 
-    - :default
-  cucumber: 
-    version: ">= 0"
-    group: 
-    - :default
-  rspec: 
-    version: = 2.0.0.beta.12
-    group: 
-    - :default
-  rspec-rails: 
-    version: = 2.0.0.beta.12
-    group: 
-    - :default
-  spork: 
-    version: ">= 0"
-    group: 
-    - :default
-  launchy: 
-    version: ">= 0"
-    group: 
-    - :default
-  factory_girl_rails: 
-    version: ">= 0"
-    group: 
-    - :default
-  validation_reflection: 
-    version: ">= 0"
-    group: 
-    - :default
+GEM
+  remote: http://rubygems.org/
+  specs:
+    abstract (1.0.0)
+    actionmailer (3.0.0.rc)
+      actionpack (= 3.0.0.rc)
+      mail (~> 2.2.5)
+    actionpack (3.0.0.rc)
+      activemodel (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      builder (~> 2.1.2)
+      erubis (~> 2.6.6)
+      i18n (~> 0.4.1)
+      rack (~> 1.2.1)
+      rack-mount (~> 0.6.9)
+      rack-test (~> 0.5.4)
+      tzinfo (~> 0.3.22)
+    activemodel (3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      builder (~> 2.1.2)
+      i18n (~> 0.4.1)
+    activerecord (3.0.0.rc)
+      activemodel (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      arel (~> 0.4.0)
+      tzinfo (~> 0.3.22)
+    activeresource (3.0.0.rc)
+      activemodel (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+    activesupport (3.0.0.rc)
+    acts-as-taggable-on (2.0.6)
+    arel (0.4.0)
+      activesupport (>= 3.0.0.beta)
+    builder (2.1.2)
+    capybara (0.3.9)
+      culerity (>= 0.2.4)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (>= 0.0.3)
+    chronic (0.2.3)
+      hoe (>= 1.2.1)
+    configuration (1.1.0)
+    cucumber (0.8.5)
+      builder (~> 2.1.2)
+      diff-lcs (~> 1.1.2)
+      gherkin (~> 2.1.4)
+      json_pure (~> 1.4.3)
+      term-ansicolor (~> 1.0.4)
+    cucumber-rails (0.3.2)
+      cucumber (>= 0.8.0)
+    culerity (0.2.10)
+    daemons (1.1.0)
+    database_cleaner (0.5.2)
+    diff-lcs (1.1.2)
+    erubis (2.6.6)
+      abstract (>= 1.0.0)
+    eventmachine (0.12.10)
+    factory_girl (1.3.1)
+    factory_girl_rails (1.0)
+      factory_girl (~> 1.3)
+      rails (>= 3.0.0.beta4)
+    ffi (0.6.3)
+      rake (>= 0.8.7)
+    gherkin (2.1.4)
+      trollop (~> 1.16.2)
+    has_permalink (0.0.2)
+      rails (>= 3.0.0.beta4)
+    hoe (2.6.1)
+      rake (>= 0.8.7)
+      rubyforge (>= 2.0.4)
+    i18n (0.4.1)
+    json_pure (1.4.3)
+    launchy (0.3.5)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
+    mail (2.2.5)
+      activesupport (>= 2.3.6)
+      mime-types
+      treetop (>= 1.4.5)
+    mime-types (1.16)
+    mysql2 (0.1.9)
+    nokogiri (1.4.2)
+    polyglot (0.3.1)
+    rack (1.2.1)
+    rack-mount (0.6.9)
+      rack (>= 1.0.0)
+    rack-test (0.5.4)
+      rack (>= 1.0)
+    rails (3.0.0.rc)
+      actionmailer (= 3.0.0.rc)
+      actionpack (= 3.0.0.rc)
+      activerecord (= 3.0.0.rc)
+      activeresource (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      bundler (>= 1.0.0.rc.1)
+      railties (= 3.0.0.rc)
+    railties (3.0.0.rc)
+      actionpack (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      rake (>= 0.8.3)
+      thor (~> 0.14.0)
+    rake (0.8.7)
+    rspec (2.0.0.beta.12)
+      rspec-core (= 2.0.0.beta.12)
+      rspec-expectations (= 2.0.0.beta.12)
+      rspec-mocks (= 2.0.0.beta.12)
+    rspec-core (2.0.0.beta.12)
+    rspec-expectations (2.0.0.beta.12)
+      diff-lcs (>= 1.1.2)
+    rspec-mocks (2.0.0.beta.12)
+    rspec-rails (2.0.0.beta.12)
+      rspec (= 2.0.0.beta.12)
+      webrat (>= 0.7.0)
+    rubyforge (2.0.4)
+      json_pure (>= 1.1.7)
+    selenium-webdriver (0.0.24)
+      ffi (>= 0.6.1)
+      json_pure
+    spork (0.8.4)
+    term-ansicolor (1.0.5)
+    thin (1.2.7)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+    thor (0.14.0)
+    treetop (1.4.8)
+      polyglot (>= 0.3.1)
+    trollop (1.16.2)
+    tzinfo (0.3.22)
+    validation_reflection (0.3.7)
+    webrat (0.7.1)
+      nokogiri (>= 1.2.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5.3)
+    whenever (0.5.0)
+      chronic (>= 0.2.3)
+    will_paginate (3.0.pre)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  acts-as-taggable-on
+  capybara
+  cucumber
+  cucumber-rails
+  database_cleaner
+  factory_girl_rails
+  has_permalink
+  launchy
+  mysql2
+  nokogiri
+  rails (= 3.0.0.rc)
+  rspec (= 2.0.0.beta.12)
+  rspec-rails (= 2.0.0.beta.12)
+  spork
+  thin
+  validation_reflection
+  whenever
+  will_paginate (= 3.0.pre)

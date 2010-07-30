@@ -1,12 +1,15 @@
+<%- @presenter = PostPresenters::ShowPresenter.new(self, @post) -%>
 <article>
   <header>
     <h1><%= @post.title %></h1>
     <span><%= t(:published_at) %>: <%= @post.published_at.strftime("%Y-%m-%d") %></span>
+    <%= @presenter.tag_list %>
   </header>
-  <section class="preamble">
-    <%= @post.preamble %>
+  <section class="summary">
+    <%= raw @post.summary %>
+    <%= @presenter.url %>
   </section>
   <section class="content">
-    <%= @post.body %>
+    <%= raw @post.body %>
   </section>
 </article>
